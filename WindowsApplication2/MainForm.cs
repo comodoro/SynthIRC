@@ -91,7 +91,7 @@ namespace SynthIRC
                     stream = new NetworkStream(socket);
                     prefixLength = options.Server.Length + options.Nick.Length + 7;
                     connected = true;
-                    
+                    motd = options.SkipMotd;
                     joinChannels();
                 }
                 catch (Exception exp)
@@ -198,11 +198,8 @@ namespace SynthIRC
                                 line = line.Substring(line.IndexOf(":"));
                         }
                     }
-                    if (line.Contains(options.Server + " " + "Message of the Day")) {
-                        motd = options.SkipMotd;
-                    }
                 }
-                if (!motd)
+                //if (!motd)
                 {
                     if (line.Contains("\x02"))
                     {

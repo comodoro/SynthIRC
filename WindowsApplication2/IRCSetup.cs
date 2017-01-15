@@ -20,7 +20,11 @@ namespace SynthIRC
             portUpDown.Value = options.Port;
             serverTextBox.Text = options.Server;
             usernameTextBox.Text = options.Username;
-            checkBox1.Checked = options.SkipMotd;
+            //channelListView.
+            foreach (string s in options.Channels) {
+                channelListView.Items.Add(s);
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,17 +35,26 @@ namespace SynthIRC
             options.Port = (int)portUpDown.Value;
             options.Server = serverTextBox.Text;
             options.Username = usernameTextBox.Text;
-            options.SkipMotd = checkBox1.Checked;
-         }
+            foreach (ListViewItem it in channelListView.Items) {
+                options.Channels.Add(it.Name);
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

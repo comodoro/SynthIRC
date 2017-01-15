@@ -40,7 +40,11 @@
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.channelListView = new System.Windows.Forms.ListView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.portUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,7 +135,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(53, 189);
+            this.button1.Location = new System.Drawing.Point(59, 313);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 25);
             this.button1.TabIndex = 10;
@@ -141,7 +145,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(150, 189);
+            this.button2.Location = new System.Drawing.Point(156, 313);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 25);
             this.button2.TabIndex = 11;
@@ -149,23 +153,64 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // checkBox1
+            // channelListView
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(25, 154);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(122, 17);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Přeskakovat MOTD";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.channelListView.CheckBoxes = true;
+            this.channelListView.Location = new System.Drawing.Point(25, 176);
+            this.channelListView.Name = "channelListView";
+            this.channelListView.Size = new System.Drawing.Size(239, 72);
+            this.channelListView.TabIndex = 12;
+            this.channelListView.UseCompatibleStateImageBehavior = false;
+            this.channelListView.View = System.Windows.Forms.View.List;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 160);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Kanály";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(25, 265);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Přidat";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(194, 265);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(70, 23);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "Odstranit";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(106, 265);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(82, 23);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "Přepnout";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // IRCSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 226);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(292, 350);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.channelListView);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.emailTextBox);
@@ -200,6 +245,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox nickTextBox;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ListView channelListView;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
